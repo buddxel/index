@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Buddxel - About</title>
+  <title>Buddxel - About & Development</title>
   <style>
     body {
       background-color: #2f3339;
@@ -12,7 +12,7 @@
       color: white;
       display: flex;
       flex-direction: column;
-      height: 100vh;
+      min-height: 100vh;
     }
 
     header {
@@ -46,45 +46,60 @@
       text-decoration: underline;
     }
 
+    .content-wrapper {
+      flex-grow: 1;
+      padding-bottom: 40px;
+    }
+
     .content {
       padding: 10px 20px;
       max-width: 800px;
       margin: 0 auto;
-      flex-grow: 1;
       text-align: left;
     }
 
-    .section-title {
+    .blog-title {
       font-size: 2em;
-      margin-bottom: 10px;
-      margin-top: 10px;
+      margin-bottom: 5px;
+      margin-top: 25px;
+      color: #fff;
     }
 
-    .blog-date {
-      color: #aaa;
-      font-size: 0.9em;
-      margin-bottom: 30px;
-    }
-
-    .blog-body {
-      font-size: 1.2em;
+    .content p {
+      margin: 5px 0;
+      font-size: 1.1em;
       line-height: 1.6;
-      margin-bottom: 20px;
+      color: #e0e0e0;
     }
 
-    .footer {
-      text-align: center;
-      color: #aaa;
-      font-size: 1em;
-      padding: 20px;
+    .video-placeholder {
       background-color: #131518;
-      margin-top: auto;
+      width: 100%;
+      max-width: 560px;
+      height: 315px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 15px;
+      border: 2px dashed #5865F2;
+      border-radius: 8px;
+      color: #aaa;
+    }
+    
+    .content a {
+      color: #5865F2;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    
+    .content a:hover {
+      text-decoration: underline;
     }
 
     .links-section {
       text-align: center;
       background-color: #131518;
-      padding: 20px;
+      padding: 25px 20px;
       margin-top: auto;
     }
 
@@ -92,16 +107,15 @@
       font-size: 1.5em;
       margin-bottom: 15px;
       color: white;
+      margin-top: 0;
     }
 
     .social-links {
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 20px;
-      margin-bottom: 20px;
+      gap: 15px;
       background-color: #131518;
-      padding: 10px 0;
     }
 
     .social-links a {
@@ -112,38 +126,23 @@
 
     .social-links a:hover {
       text-decoration: underline;
-    }
-
-    .bottom-links {
-      display: flex;
-      justify-content: space-between;
-      width: 100%;
-      padding: 10px 20px;
-      background-color: #131518;
-      color: white;
-      font-size: 1em;
-      margin-top: auto;
-    }
-
-    .bottom-links div {
-      display: flex;
-      gap: 15px;
-    }
-
-    .bottom-links a {
-      color: white;
-      text-decoration: none;
-      font-size: 1em;
-    }
-
-    .bottom-links a:hover {
-      text-decoration: underline;
+      color: #5865F2;
     }
 
     .social-links-row {
       display: flex;
       justify-content: center;
-      gap: 20px;
+      gap: 25px;
+      flex-wrap: wrap;
+    }
+
+    .footer {
+      text-align: center;
+      color: #aaa;
+      font-size: 0.9em;
+      padding: 15px 20px;
+      background-color: #0e1012;
+      border-top: 1px solid #1f2326;
     }
   </style>
 </head>
@@ -154,47 +153,56 @@
     <div class="links">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
-      <a href="download.html">Download</a>
-      <a href="blog.html">Blog</a>
-      <a href="contact.html">Contact Us</a>
+      <a href="about.html#download">Download</a>
+      <a href="about.html#blog">Blog</a>
+      <a href="about.html#contact">Contact Us</a>
     </div>
   </header>
 
-  <!-- About Page Content -->
-  <div class="content">
-    <h1 class="section-title">What is Buddxel?</h1>
-    <p>Buddxel is a 3D sandbox adventure game where creativity and exploration are at the forefront. Players can build, explore, fight, craft, and more, in an ever-evolving world filled with endless possibilities. From vast landscapes to mysterious caves, Buddxel offers players the freedom to shape the world in any way they like.</p>
-
-    <h1 class="section-title">Features</h1>
-    <p>With dynamic weather systems, complex world generation, and a large array of tools and blocks, Buddxel keeps things fresh and exciting. Whether you're designing structures, farming, exploring dungeons, or fighting hostile mobs, every gameplay session offers something new.</p>
-
-    <h1 class="section-title">The World of Buddxel</h1>
-    <p>Explore diverse biomes, from lush forests to barren deserts, and uncover secrets in procedurally generated landscapes. With multiplayer capabilities, you can even team up with other players to tackle challenges, share creations, or compete for survival.</p>
-
-    <h1 class="section-title">Future Plans</h1>
-    <p>The future of Buddxel holds numerous updates, features, and events. Our goal is to continuously improve and add to the game, from new blocks and items to innovative gameplay features. Stay tuned for more exciting updates!</p>
-
-    <h1 class="section-title">Join the Community</h1>
-    <p>Become part of the Buddxel community by joining our Discord, following us on social media, and sharing your creations with us! The world of Buddxel is always expanding, and we want you to be a part of it.</p>
+  <div class="content-wrapper">
+    <div class="content" id="about">
+      <h1 class="blog-title">About the Project</h1>
+      <p>Buddxel is an independent open-world 3D sandbox game developed entirely by a solo developer (Vlad420). Built on pure passion for code and gaming, it features infinite ways to play, shape voxels, and experiment with mechanics. Active development officially started on June 23!</p>
+    </div>
+      
+    <div class="content" id="download">
+      <h1 class="blog-title">Download Launcher</h1>
+      <p>Ready to jump into the grid? The custom Buddxel Launcher is currently being forged. Once the stable alpha build is ready, the installer link will appear right here.</p>
+    </div>
+      
+    <div class="content" id="blog">
+      <h1 class="blog-title">Development Blog</h1>
+      <p>This is where the history of Buddxel is documented. Long-form video devlogs, coding breakthroughs, and funny physics bugs will be archived here direct from the YouTube channel.</p>
+      <!-- Сюда в будущем ты вставишь <iframe> код своего видео из YouTube -->
+      <div class="video-placeholder">
+        🎬 Future Devlog Video Screen Will Be Embedded Here!
+      </div>
+    </div>
+      
+    <div class="content" id="contact">
+      <h1 class="blog-title">Contact & Support</h1>
+      <p>For feedback, ideas, or archive requests, you can reach out directly via our official channels or send a direct letter to our main mail hub.</p>
+      <p>Email Hub: <a href="mailto:buddxel@gmail.com">buddxel@gmail.com</a></p>
+    </div>
   </div>
 
   <div class="links-section">
-    <h2>Links</h2>
+    <h2>Official Community Hubs</h2>
     <div class="social-links">
       <div class="social-links-row">
-        <a href="https://https://www.youtube.com/@buddxel" target="_blank">YouTube</a>
-        <a href="https://www.instagram.com/buddxel/" target="_blank">Instagram</a>
-        <a href="https://x.com/buddxel" target="_blank">X (Twitter)</a>
+        <a href="https://youtube.com" target="_blank">YouTube</a>
+        <a href="https://twitch.tv" target="_blank">Twitch</a>
+        <a href="https://x.com" target="_blank">X (Twitter)</a>
+        <a href="https://instagram.com" target="_blank">Instagram</a>
       </div>
       <div class="social-links-row">
-        <a href="https://www.tiktok.com/@buddxel" target="_blank">TikTok</a>
-        <a href="https://www.reddit.com/r/buddxel/" target="_blank">Reddit</a>
-        <a href="https://discord.com/invite/Ptp8XFWTeM" target="_blank">Discord</a>
+        <a href="https://tiktok.com" target="_blank">TikTok</a>
+        <a href="https://reddit.com" target="_blank">Reddit</a>
+        <a href="https://discord.com" target="_blank">Discord</a>
       </div>
       <div class="social-links-row">
-        <a href="https://www.facebook.com/profile.php?id=61586487501369" target="_blank">Facebook</a>
-        <a href="https://bsky.app/profile/buddxel.bsky.social" target="_blank">Bluesky</a>
-        <a href="https://t.me/buddxel" target="_blank">Telegram</a>
+        <a href="https://bsky.app" target="_blank">Bluesky</a>
+        <a href="https://t.me" target="_blank">Telegram</a>
       </div>
     </div>
   </div>
